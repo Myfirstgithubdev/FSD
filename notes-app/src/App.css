@@ -1,0 +1,173 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+button, input {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app.light {
+  background: #f0f4ff;
+  color: #222;
+}
+
+.app.dark {
+  background: #171923;
+  color: #f7fafc;
+}
+
+.notes-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dark .notes-container {
+  background: #252a38;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  margin: 0;
+  color: #4f46e5;
+}
+
+.dark h1 {
+  color: #a5b4fc;
+}
+
+button {
+  border: none;
+  border-radius: 7px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.theme-button {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.dark .theme-button {
+  background: #454b60;
+  color: white;
+}
+
+.note-input {
+  display: flex;
+  gap: 10px;
+}
+
+.note-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: white;
+  color: #222;
+}
+
+.dark .note-input input {
+  background: #171923;
+  border-color: #4a5568;
+  color: white;
+}
+
+.add-button {
+  background: #4f46e5;
+  color: white;
+}
+
+.add-button:hover {
+  background: #3730a3;
+}
+
+.note-count {
+  margin: 22px 0 15px;
+  font-weight: bold;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 25px 0;
+  color: #777;
+}
+
+.dark .empty-message {
+  color: #cbd5e1;
+}
+
+.notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.note-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 10px;
+  padding: 14px;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.note-item.light {
+  background: #eef2ff;
+}
+
+.note-item.dark {
+  background: #353b4b;
+}
+
+.note-item span {
+  flex: 1;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.delete-button {
+  flex-shrink: 0;
+  background: #dc2626;
+  color: white;
+}
+
+.delete-button:hover {
+  background: #991b1b;
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .note-input {
+    flex-direction: column;
+  }
+}
